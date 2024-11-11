@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Your Company Name</title>
+
+<link rel="stylesheet" href="common.css">
+
+<!-- 加载百度地图API，并指定语言为英语 -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=YOUR_BAIDU_MAP_API_KEY&language=en"></script>
+
+<style>
+  #map {
+    height: 300px; 
+    width: 100%;   
+  }
+  @media (max-width: 768px) {
+    #map {
+      height: 200px; 
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<header class="header">
+  <h1>Contact us</h1>
+</header>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="support.html">Support</a>
+  <a href="product.html">Product</a>
+  <a href="about us.html">About Us</a>
+  <a href="news.html" class="active">Contact</a>
+</nav>
+
+<main class="contact-container">
+  <section class="contact-info">
+    <div class="contact-info-item">
+      <h3>Address</h3>
+      <p>13th Street 47 W 13th St<br>New York, NY 10011, USA</p>
+    </div>
+    <div class="contact-info-item">
+      <h3>Phone</h3>
+      <p>123-4567-8910</p>
+    </div>
+    <div class="contact-info-item">
+      <h3>Email</h3>
+      <p>1122334455@google.com</p>
+    </div>
+  </section>
+  
+  <div id="map"></div>
+
+  <form class="contact-form" action="submit.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <input type="submit" value="Send Message">
+  </form>
+</main>
+
+<footer class="footer">
+  <p>Contact information</p>
+</footer>
+
+<script>
+  function loadBaiduMap() {
+    var map = new BMap.Map("map"); // 创建Map实例
+    var point = new BMap.Point(151.2152, -33.8569); // 悉尼歌剧院的坐标
+    map.centerAndZoom(point, 15); // 初始化地图，设置中心点坐标和地图级别
+
+    map.addControl(new BMap.NavigationControl()); // 添加平移缩放控件
+    map.addControl(new BMap.ScaleControl()); // 添加比例尺控件
+    map.addControl(new BMap.OverviewMapControl()); // 添加缩略图控件
+    map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
+  }
+
+  if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', loadBaiduMap);
+  } else if (document.attachEvent) {
+    document.attachEvent('onreadystatechange', function () {
+      if (document.readyState === 'complete') {
+        loadBaiduMap();
+      }
+    });
+  }
+</script>
+
+<div class="footer">  
+  <p>©Jason SunYingjie</p>  
+</div>  
+
+</body>
+</html>
