@@ -1,77 +1,5 @@
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Header Styles */
-.header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Navigation Bar Styles */
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-/* Main Content Styles */
-.row {
-    display: flex;
-}
-
-.leftcolumn, .rightcolumn {
-    flex: 50%;
-    background-color: #fff;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.card {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card h2, .card h3 {
-    color: #333;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 2px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-
-/* Global Styles */
-body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
@@ -80,17 +8,97 @@ body {
 
 /* Header Styles */
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 1em;
+  padding: 10px 20px; /* 增加内边距 */
+}
+
+.header img {
+  height: 70px; /* 放大logo高度 */
+  margin-right: 20px; /* 增加logo和文本之间的间距 */
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
   text-align: center;
 }
 
+.header h1,
+.header p {
+  margin: 0; /* 移除默认的margin */
+}
+
 .header h1 {
-  margin: 0;
+  font-size: 24px; /* 调整标题字体大小 */
+}
+
+.header p {
+  font-size: 16px; /* 调整描述字体大小 */
 }
 
 /* Navigation Bar Styles */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Main Content Styles */
+.row {
+  display: flex;
+}
+
+.leftcolumn, .rightcolumn {
+  flex: 50%;
+  background-color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card h2, .card h3 {
+  color: #333;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Navbar Styles (if used) */
 .navbar {
   background-color: #f2f2f2;
   display: flex;
@@ -189,7 +197,7 @@ body {
   background-color: #555;
 }
 
-/* Footer Styles */
+/* Footer Styles (if different from the above) */
 .footer {
   background-color: #333;
   color: #fff;
