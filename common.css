@@ -13,12 +13,12 @@ body {
   align-items: center;
   background-color: #333;
   color: #fff;
-  padding: 10px 20px; /* 增加内边距 */
+  padding: 10px 20px; 
 }
 
 .header img {
-  height: 70px; /* 放大logo高度 */
-  margin-right: 20px; /* 增加logo和文本之间的间距 */
+  height: 70px; 
+  margin-right: 20px; 
 }
 
 .header-content {
@@ -32,15 +32,15 @@ body {
 
 .header h1,
 .header p {
-  margin: 0; /* 移除默认的margin */
+  margin: 0; 
 }
 
 .header h1 {
-  font-size: 24px; /* 调整标题字体大小 */
+  font-size: 24px; 
 }
 
 .header p {
-  font-size: 16px; /* 调整描述字体大小 */
+  font-size: 16px; 
 }
 
 /* Navigation Bar Styles */
